@@ -4,8 +4,37 @@
     border-color: black;
     width: 50%;
     margin: 5px auto 5px auto ;
+    
 }
+
+.exMain {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+
 
 .workout {
     text-align: center;
+    
+}
+
+.exBtn {
+    width: 100px;
+    margin: 0 5px 0 5px;
+}
+
+img {
+    width: 150px;
+    height: 150px;
+}
+
+.hiddenDesc {
+    display: none;
+}
+
+.exDesc {
+    display: inline;
 }
