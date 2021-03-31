@@ -6,6 +6,10 @@ import MiltPress from './images/miltpress.jpg';
 import DeadLift from './images/deadlift.jpg';
 import Pushup from './images/pushup.jpg';
 import LatRaise from './images/latraise.jpg';
+import LatPull from './images/latpull.jpg';
+import PullUp from './images/pullup.jpg';
+import EZBar from './images/ezbar.jpeg';
+import ConcCurls from './images/conccurls.jpeg';
 
 class Workout extends Component {
   state = {
@@ -53,7 +57,35 @@ class Workout extends Component {
             image: LatRaise,
             instructions: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut'
         },
-      ]
+      ],
+      backNum: null,
+      hiddenBack: true,
+      backMoves: [
+        {
+            name: 'Lat Pulldown',
+            image: LatPull,
+            instructions: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut'
+        },
+        {
+            name: 'Pull Up',
+            image: PullUp,
+            instructions: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut'
+        },
+      ],
+      BicepNum: null,
+      hiddenBicep: true,
+      bicepMoves: [
+        {
+            name: 'EZ Bar Curls',
+            image: EZBar,
+            instructions: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut'
+        },
+        {
+            name: 'Concentration Curls',
+            image: ConcCurls,
+            instructions: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut'
+        },
+      ],
   };
 
   getRandomInt = (max) => {
@@ -64,10 +96,14 @@ class Workout extends Component {
     let chestLength = this.state.chestMoves.length
     let legLength = this.state.legMoves.length
     let shoulderLength = this.state.shoulderMoves.length
+    let backLength = this.state.backMoves.length
+    let bicepLength = this.state.bicepMoves.length
     this.setState({
         chestNum: this.getRandomInt(chestLength),
         legNum: this.getRandomInt(legLength),
         shoulderNum: this.getRandomInt(shoulderLength),
+        backNum: this.getRandomInt(backLength),
+        bicepNum: this.getRandomInt(bicepLength),
     })
   }
 
@@ -104,6 +140,28 @@ class Workout extends Component {
     })
   }
 
+  newBack = () => {
+    let backLength = this.state.backMoves.length
+    let newNum = this.state.backNum + 1    
+    if(newNum > backLength - 1) {
+        newNum = 0
+    }
+    this.setState({
+        backNum: newNum,
+    })
+  }
+
+  newBicep = () => {
+    let bicepLength = this.state.bicepMoves.length
+    let newNum = this.state.bicepNum + 1    
+    if(newNum > bicepLength - 1) {
+        newNum = 0
+    }
+    this.setState({
+        bicepNum: newNum,
+    })
+  }
+
   showChest = () => {
     this.setState({hiddenChest: false})
   }
@@ -128,6 +186,22 @@ class Workout extends Component {
     this.setState({hiddenShoulder: true})
   }
 
+  showBack = () => {
+    this.setState({hiddenBack: false})
+  }
+
+  hideBack = () => {
+    this.setState({hiddenBack: true})
+  }
+
+  showBicep = () => {
+    this.setState({hiddenBicep: false})
+  }
+
+  hideBicep = () => {
+    this.setState({hiddenBicep: true})
+  }
+
 
   
 
@@ -147,9 +221,9 @@ class Workout extends Component {
 
 
     return (
-        <div className="workout">
+        <div className="workout" >
             <button onClick={this.newWorkout}>New Workout</button>
-            <div className='exercise'>
+            <div className='exercise' onMouseOver={this.showChest} onMouseLeave={this.hideChest}>
                 <div className='exMain'>
                     <img src={this.state.chestMoves[this.state.chestNum].image} ></img>
                     <div>
@@ -166,7 +240,7 @@ class Workout extends Component {
                 </div>
                 
             </div>
-            <div className='exercise'>
+            <div className='exercise' onMouseOver={this.showLeg} onMouseLeave={this.hideLeg}>
                 <div className='exMain'>
                     <img src={this.state.legMoves[this.state.legNum].image} ></img>
                     <div>
@@ -183,7 +257,7 @@ class Workout extends Component {
                 </div>
                 
             </div>
-            <div className='exercise'>
+            <div className='exercise' onMouseOver={this.showShoulder} onMouseLeave={this.hideShoulder}>
                 <div className='exMain'>
                     <img src={this.state.shoulderMoves[this.state.shoulderNum].image} ></img>
                     <div>
@@ -197,6 +271,40 @@ class Workout extends Component {
                 <div className={(this.state.hiddenShoulder) ? 'hiddenDesc' : 'exDesc'} >
                     <p>{this.state.shoulderMoves[this.state.shoulderNum].instructions}</p>
                     <button className='exBtn' onClick={this.hideShoulder}>Less Info</button>
+                </div>
+                
+            </div>
+            <div className='exercise' onMouseOver={this.showBack} onMouseLeave={this.hideBack}>
+                <div className='exMain'>
+                    <img src={this.state.backMoves[this.state.backNum].image} ></img>
+                    <div>
+                        <h1>{this.state.backMoves[this.state.backNum].name}</h1>
+                        <div>
+                            <button className='exBtn' onClick={this.newBack}>New Exercise</button>
+                            <button className='exBtn' onClick={this.showBack}>More Info</button>
+                        </div>
+                    </div>
+                </div>
+                <div className={(this.state.hiddenBack) ? 'hiddenDesc' : 'exDesc'} >
+                    <p>{this.state.backMoves[this.state.backNum].instructions}</p>
+                    <button className='exBtn' onClick={this.hideBack}>Less Info</button>
+                </div>
+                
+            </div>
+            <div className='exercise' onMouseOver={this.showBicep} onMouseLeave={this.hideBicep}>
+                <div className='exMain'>
+                    <img src={this.state.bicepMoves[this.state.bicepNum].image} ></img>
+                    <div>
+                        <h1>{this.state.bicepMoves[this.state.bicepNum].name}</h1>
+                        <div>
+                            <button className='exBtn' onClick={this.newBicep}>New Exercise</button>
+                            <button className='exBtn' onClick={this.showBicep}>More Info</button>
+                        </div>
+                    </div>
+                </div>
+                <div className={(this.state.hiddenBicep) ? 'hiddenDesc' : 'exDesc'} >
+                    <p>{this.state.bicepMoves[this.state.bicepNum].instructions}</p>
+                    <button className='exBtn' onClick={this.hideBicep}>Less Info</button>
                 </div>
                 
             </div>
