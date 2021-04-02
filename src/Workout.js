@@ -10,82 +10,26 @@ import LatPull from './images/latpull.jpg';
 import PullUp from './images/pullup.jpg';
 import EZBar from './images/ezbar.jpeg';
 import ConcCurls from './images/conccurls.jpeg';
+import Store from './store.js'
 
 class Workout extends Component {
   state = {
       chestNum: null,
       hiddenChest: true,
-      chestMoves: [
-        {
-            name: 'Bench Press',
-            image: Bench,
-            instructions: 'Raise the bar off the hook, lower it to your chest, and push back up until arms are nearly straight.',
-            isHidden: true
-
-        },
-        {
-            name: 'Pushup',
-            image: Pushup,
-            instructions: 'From a plank position, bend your elbows and lower your body until you are near the ground. Push back up into plank position.',
-            
-        },
-      ],
+      chestMoves: Store.chestMoves,
+      
       legNum: null,
       hiddenLeg: true,
-      legMoves: [
-        {
-            name: 'Barbell Squat',
-            image: Squat,
-            instructions: 'Rack a barbell onto your upper back. Bend your knees and push your hips back until your upper leg is nearly parallel with the ground. Drive up through your heels and stand back up just short of locking your knees.'
-        },
-        {
-            name: 'Deadlift',
-            image: DeadLift,
-            instructions: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut'
-        },
-      ],
+      legMoves: Store.legMoves,
       shoulderNum: null,
       hiddenShoulder: true,
-      shoulderMoves: [
-        {
-            name: 'Military Press',
-            image: MiltPress,
-            instructions: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut'
-        },
-        {
-            name: 'Lateral Raise',
-            image: LatRaise,
-            instructions: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut'
-        },
-      ],
+      shoulderMoves: Store.shoulderMoves,
       backNum: null,
       hiddenBack: true,
-      backMoves: [
-        {
-            name: 'Lat Pulldown',
-            image: LatPull,
-            instructions: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut'
-        },
-        {
-            name: 'Pull Up',
-            image: PullUp,
-            instructions: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut'
-        },
-      ],
+      backMoves: Store.backMoves,
       BicepNum: null,
       hiddenBicep: true,
-      bicepMoves: [
-        {
-            name: 'EZ Bar Curls',
-            image: EZBar,
-            instructions: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut'
-        },
-        {
-            name: 'Concentration Curls',
-            image: ConcCurls,
-            instructions: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut'
-        },
-      ],
+      bicepMoves: Store.bicepMoves,
   };
 
   getRandomInt = (max) => {
@@ -211,17 +155,21 @@ class Workout extends Component {
     if(this.state.chestNum == null) {
         return (
             <div className="workout">
-            <button onClick={this.newWorkout}>New Workout</button>
-            <div className='exercise'>
-                <h1>Hit the button to get a new workout</h1>
+                <h1>Welcome to RandoFit!</h1>
+                <p>Are you lost in the gym? Sick of your workout plan? Maybe you just need a change of pace. RandoFit is here to help. Just click the button below, and we'll generate a random, full body work out for you.</p>
+                <button onClick={this.newWorkout}>New Workout</button>
+                <div className='exercise'>
+                    <h2>Hit the button to get a new workout</h2>
+                </div>
             </div>
-        </div>
         )
     }
 
 
     return (
         <div className="workout" >
+            <h1>Welcome to RandoFit!</h1>
+            <p>Are you lost in the gym? Sick of your workout plan? Maybe you just need a change of pace. RandoFit is here to help. Just click the button below, and we'll generate a random, full body work out for you.</p>
             <button onClick={this.newWorkout}>New Workout</button>
             <div className='exercise' onMouseOver={this.showChest} onMouseLeave={this.hideChest}>
                 <div className='exMain'>
