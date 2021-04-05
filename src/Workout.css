@@ -2,7 +2,7 @@
     border-style: solid;
     border-width: 3px;
     border-color: black;
-    width: 50%;
+    width: 100%;
     margin: 5px auto 5px auto ;
     
 }
@@ -18,7 +18,10 @@
 
 .workout {
     text-align: center;
-    
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30PX;
 }
 
 .exBtn {
@@ -27,8 +30,9 @@
 }
 
 img {
-    width: 150px;
-    height: 150px;
+    width: 100px;
+    height: 100px;
+    padding: 5px;
 }
 
 .hiddenDesc {
@@ -38,3 +42,18 @@ img {
 .exDesc {
     display: inline;
 }
+
+.intro {
+    margin-bottom: 30px;
+    /* display: none; */
+}
+
+@media only screen and (min-width: 600px) {
+    .workout {
+      width: 50%;
+    }
+    .intro {
+        margin-bottom: 30px;
+        display: inline;
+    }
+  }

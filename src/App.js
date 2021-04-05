@@ -1,7 +1,8 @@
 import logo from './logo.svg';
 import './App.css';
 import Workout from './Workout.js'
-import Navbar from './Navbar'
+import Navbar from './Navbar.js'
+import About from './About.js'
 import React, { Component } from 'react';
 
 function App() {
@@ -9,6 +10,7 @@ function App() {
     <div className="App">
       <Navbar />
       <Workout />
+      <About id='about' />
     </div>
   );
 }

@@ -155,9 +155,11 @@ class Workout extends Component {
     if(this.state.chestNum == null) {
         return (
             <div className="workout">
-                <h1>Welcome to RandoFit!</h1>
-                <p>Are you lost in the gym? Sick of your workout plan? Maybe you just need a change of pace. RandoFit is here to help. Just click the button below, and we'll generate a random, full body work out for you.</p>
-                <button onClick={this.newWorkout}>New Workout</button>
+                <div className='intro'>
+                    <h1>Welcome to RandoFit!</h1>
+                    <p>Are you lost in the gym? Sick of your workout plan? Maybe you just need a change of pace. RandoFit is here to help. Just click the button below, and we'll generate a random, full body work out for you.</p>
+                    <button onClick={this.newWorkout}>New Workout</button>
+                </div>
                 <div className='exercise'>
                     <h2>Hit the button to get a new workout</h2>
                 </div>
@@ -168,14 +170,17 @@ class Workout extends Component {
 
     return (
         <div className="workout" >
-            <h1>Welcome to RandoFit!</h1>
-            <p>Are you lost in the gym? Sick of your workout plan? Maybe you just need a change of pace. RandoFit is here to help. Just click the button below, and we'll generate a random, full body work out for you.</p>
-            <button onClick={this.newWorkout}>New Workout</button>
+            <div className='intro'>
+                <h1>Welcome to RandoFit!</h1>
+                <p>Are you lost in the gym? Sick of your workout plan? Maybe you just need a change of pace. RandoFit is here to help. Just click the button below, and we'll generate a random, full body work out for you.</p>
+                <button onClick={this.newWorkout}>New Workout</button>
+            </div>
+           
             <div className='exercise' onMouseOver={this.showChest} onMouseLeave={this.hideChest}>
                 <div className='exMain'>
                     <img src={this.state.chestMoves[this.state.chestNum].image} ></img>
                     <div>
-                        <h1>{this.state.chestMoves[this.state.chestNum].name}</h1>
+                        <h2>{this.state.chestMoves[this.state.chestNum].name}</h2>
                         <div>
                             <button className='exBtn' onClick={this.newChest}>New Exercise</button>
                             <button className='exBtn' onClick={this.showChest}>More Info</button>
@@ -192,7 +197,7 @@ class Workout extends Component {
                 <div className='exMain'>
                     <img src={this.state.legMoves[this.state.legNum].image} ></img>
                     <div>
-                        <h1>{this.state.legMoves[this.state.legNum].name}</h1>
+                        <h2>{this.state.legMoves[this.state.legNum].name}</h2>
                         <div>
                             <button className='exBtn' onClick={this.newLeg}>New Exercise</button>
                             <button className='exBtn' onClick={this.showLeg}>More Info</button>
@@ -209,7 +214,7 @@ class Workout extends Component {
                 <div className='exMain'>
                     <img src={this.state.shoulderMoves[this.state.shoulderNum].image} ></img>
                     <div>
-                        <h1>{this.state.shoulderMoves[this.state.shoulderNum].name}</h1>
+                        <h2>{this.state.shoulderMoves[this.state.shoulderNum].name}</h2>
                         <div>
                             <button className='exBtn' onClick={this.newShoulder}>New Exercise</button>
                             <button className='exBtn' onClick={this.showShoulder}>More Info</button>
@@ -226,7 +231,7 @@ class Workout extends Component {
                 <div className='exMain'>
                     <img src={this.state.backMoves[this.state.backNum].image} ></img>
                     <div>
-                        <h1>{this.state.backMoves[this.state.backNum].name}</h1>
+                        <h2>{this.state.backMoves[this.state.backNum].name}</h2>
                         <div>
                             <button className='exBtn' onClick={this.newBack}>New Exercise</button>
                             <button className='exBtn' onClick={this.showBack}>More Info</button>
@@ -243,7 +248,7 @@ class Workout extends Component {
                 <div className='exMain'>
                     <img src={this.state.bicepMoves[this.state.bicepNum].image} ></img>
                     <div>
-                        <h1>{this.state.bicepMoves[this.state.bicepNum].name}</h1>
+                        <h2>{this.state.bicepMoves[this.state.bicepNum].name}</h2>
                         <div>
                             <button className='exBtn' onClick={this.newBicep}>New Exercise</button>
                             <button className='exBtn' onClick={this.showBicep}>More Info</button>

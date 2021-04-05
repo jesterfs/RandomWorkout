@@ -15,12 +15,16 @@ class Workout extends Component {
     
     return (
        <div className='navContainer'>
+          <div className='navLinks ' id='fillerLink'>
+                
+                <a href="#about">About</a>
+           </div>
            <div className='navImg'>
                 <img src={Logo}></img>
            </div>
            <div className='navLinks '>
-                <a>Help</a>
-                <a>About</a>
+                
+                <a href="#about">About</a>
            </div>
        </div>
     );

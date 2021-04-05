@@ -1,7 +1,7 @@
 .navContainer {
-    background-color: #C3423F;
+    background-color: red;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-between;
     padding-left: 100px;
     padding-right: 100px;
@@ -16,4 +16,25 @@
 
 a {
     margin: 10px;
+    text-decoration: none;
+    color: black;
 }
+
+a:hover {
+    color: gray;
+}
+
+#fillerLink {
+    visibility: hidden;
+    display: none;
+}
+
+@media only screen and (min-width: 600px) {
+    .navContainer {
+      flex-direction: row;
+    }
+
+    #fillerLink {
+        display: inline;
+    }
+  }
