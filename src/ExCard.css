@@ -1,21 +1,17 @@
 .exercise {
     border-style: solid;
     border-width: 3px;
-    border-color: lightgray;
-    background-color: lightgray;
+    border-color: black;
     width: 100%;
     margin: 5px auto 5px auto ;
-    /* border-radius: 5%; */
+    
 }
 
 .exMain {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-between;
-    margin-left: 30px;
-    margin-right: 0;
-    margin-bottom: 20px;
+    justify-content: space-around;
 }
 
 
@@ -25,27 +21,18 @@
     width: 90%;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 30px;
-    
+    margin-bottom: 30PX;
 }
 
 .exBtn {
     width: 100px;
     margin: 0 5px 0 5px;
-    text-align: center;
-    padding: 0 auto 0 auto;
 }
 
 img {
     width: 100px;
     height: 100px;
     padding: 5px;
-    
-}
-
-.exText {
-    flex: 2;
-    text-align: center;
 }
 
 .hiddenDesc {
@@ -56,9 +43,9 @@ img {
     display: inline;
 }
 
-.introBtn {
-    
-    margin-top: 20px;
+.intro {
+    margin-bottom: 30px;
+    /* display: none; */
 }
 
 @media only screen and (min-width: 600px) {
@@ -66,19 +53,13 @@ img {
       width: 50%;
     }
     .intro {
-        margin-bottom: 20px;
-        margin-top: 20px;
+        margin-bottom: 30px;
+        display: inline;
     }
   }
 
 ol {
     text-align: left;
-    width: 50%;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.block-buttons {
     width: 50%;
     margin-left: auto;
     margin-right: auto;

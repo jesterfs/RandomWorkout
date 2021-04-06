@@ -1,3 +1,4 @@
+
 import './Workout.css';
 import React, { Component } from 'react';
 import Bench from './images/bench.jpg';
@@ -15,6 +16,12 @@ import InclineBench from './images/inclinebench.jpg';
 import LegPress from './images/legpress.jpg';
 import ChestDip from './images/chestdip.jpg';
 import Store from './store.js'
+
+import { Button } from "rsuite"
+import 'rsuite/dist/styles/rsuite-default.css';
+// import { withStyles } from '@material-ui/core/styles';
+import { Card } from 'grommet';
+
 
 class Workout extends Component {
   state = {
@@ -162,11 +169,11 @@ class Workout extends Component {
                 <div className='intro'>
                     <h1>Welcome to RandoFit!</h1>
                     <p>Are you lost in the gym? Sick of your workout plan? Maybe you just need a change of pace. RandoFit is here to help. Just click the button below, and we'll generate a random, full body work out for you.</p>
-                    <button onClick={this.newWorkout}>New Workout</button>
+                    <Button  className='introBtn' color='red' onClick={this.newWorkout} block>New Workout</Button>
                 </div>
-                <div className='exercise'>
+                <Card elevation='medium'  className='exercise'>
                     <h2>Hit the button to get a new workout</h2>
-                </div>
+                </Card>
             </div>
         )
     }
@@ -177,124 +184,128 @@ class Workout extends Component {
             <div className='intro'>
                 <h1>Welcome to RandoFit!</h1>
                 <p>Are you lost in the gym? Sick of your workout plan? Maybe you just need a change of pace. RandoFit is here to help. Just click the button below, and we'll generate a random, full body work out for you.</p>
-                <button onClick={this.newWorkout}>New Workout</button>
+                <Button className='introBtn' color='red' onClick={this.newWorkout} block>New Workout</Button>
             </div>
            
-            <div className='exercise' onMouseOver={this.showChest} onMouseLeave={this.hideChest}>
+            <Card elevation='medium' round='small'  className='exercise' onMouseOver={this.showChest} onMouseLeave={this.hideChest}>
                 <div className='exMain'>
                     <img src={this.state.chestMoves[this.state.chestNum].image} ></img>
-                    <div>
+                    <div className='exText'>
                         <h2>{this.state.chestMoves[this.state.chestNum].name}</h2>
-                        <div>
-                            <button className='exBtn' onClick={this.newChest}>New Exercise</button>
-                            <button className='exBtn' onClick={this.showChest}>More Info</button>
+                        <div className='block-buttons'>
+                            <Button  color='red' className='exBtn block-button' onClick={this.newChest} block>New Exercise</Button>
+                            <Button  color='red' className='exBtn block-button' onClick={this.showChest} block>More Info</Button>
+                        </div>
+                        <div className={(this.state.hiddenChest) ? 'hiddenDesc' : 'exDesc'} id='chestDesc'>
+                            <h3>Instructions</h3>
+                            <ol>
+                                {this.state.chestMoves[this.state.chestNum].instructions.map(instruction => 
+                                <li >
+                                    {instruction}
+                                </li>)}
+                            </ol>
+                            <Button appearance='ghost' color='red' className='exBtn' onClick={this.hideChest}>Less Info</Button>
                         </div>
                     </div>
                 </div>
-                <div className={(this.state.hiddenChest) ? 'hiddenDesc' : 'exDesc'} id='chestDesc'>
-                    <h3>Instructions</h3>
-                    <ol>
-                        {this.state.chestMoves[this.state.chestNum].instructions.map(instruction => 
-                        <li >
-                            {instruction}
-                        </li>)}
-                    </ol>
-                    <button className='exBtn' onClick={this.hideChest}>Less Info</button>
-                </div>
                 
-            </div>
-            <div className='exercise' onMouseOver={this.showLeg} onMouseLeave={this.hideLeg}>
+                
+            </Card>
+            <Card elevation='medium' className='exercise' onMouseOver={this.showLeg} onMouseLeave={this.hideLeg}>
                 <div className='exMain'>
                     <img src={this.state.legMoves[this.state.legNum].image} ></img>
-                    <div>
+                    <div className='exText'>
                         <h2>{this.state.legMoves[this.state.legNum].name}</h2>
-                        <div>
-                            <button className='exBtn' onClick={this.newLeg}>New Exercise</button>
-                            <button className='exBtn' onClick={this.showLeg}>More Info</button>
+                        <div className='block-buttons'>
+                            <Button  color='red' className='exBtn block-button' onClick={this.newLeg} block>New Exercise</Button>
+                            <Button  color='red' className='exBtn block-button' onClick={this.showLeg} block>More Info</Button>
+                        </div>
+                        <div className={(this.state.hiddenLeg) ? 'hiddenDesc' : 'exDesc'} >
+                            <h3>Instructions</h3>
+                            <ol>
+                                {this.state.legMoves[this.state.legNum].instructions.map(instruction => 
+                                <li >
+                                    {instruction}
+                                </li>)}
+                            </ol>
+                            <Button appearance='ghost' color='red' className='exBtn' onClick={this.hideLeg}>Less Info</Button>
                         </div>
                     </div>
                 </div>
-                <div className={(this.state.hiddenLeg) ? 'hiddenDesc' : 'exDesc'} >
-                    <h3>Instructions</h3>
-                    <ol>
-                        {this.state.legMoves[this.state.legNum].instructions.map(instruction => 
-                        <li >
-                            {instruction}
-                        </li>)}
-                    </ol>
-                    <button className='exBtn' onClick={this.hideLeg}>Less Info</button>
-                </div>
                 
-            </div>
-            <div className='exercise' onMouseOver={this.showShoulder} onMouseLeave={this.hideShoulder}>
+                
+            </Card>
+            <Card elevation='medium' className='exercise' onMouseOver={this.showShoulder} onMouseLeave={this.hideShoulder}>
                 <div className='exMain'>
                     <img src={this.state.shoulderMoves[this.state.shoulderNum].image} ></img>
-                    <div>
+                    <div className='exText'>
                         <h2>{this.state.shoulderMoves[this.state.shoulderNum].name}</h2>
-                        <div>
-                            <button className='exBtn' onClick={this.newShoulder}>New Exercise</button>
-                            <button className='exBtn' onClick={this.showShoulder}>More Info</button>
+                        <div className='block-buttons'>
+                            <Button  color='red' className='exBtn block-button' onClick={this.newShoulder} block>New Exercise</Button>
+                            <Button  color='red' className='exBtn block-button' onClick={this.showShoulder} block>More Info</Button>
                         </div>
+                        <div className={(this.state.hiddenShoulder) ? 'hiddenDesc' : 'exDesc'} >
+                            <h3>Instructions</h3>
+                                <ol>
+                                    {this.state.shoulderMoves[this.state.shoulderNum].instructions.map(instruction => 
+                                    <li >
+                                        {instruction}
+                                    </li>)}
+                                </ol>
+                                <Button appearance='ghost' color='red' className='exBtn' onClick={this.hideShoulder}>Less Info</Button>
+                        </div> 
                     </div>
                 </div>
-                <div className={(this.state.hiddenShoulder) ? 'hiddenDesc' : 'exDesc'} >
-                <h3>Instructions</h3>
-                    <ol>
-                        {this.state.shoulderMoves[this.state.shoulderNum].instructions.map(instruction => 
-                        <li >
-                            {instruction}
-                        </li>)}
-                    </ol>
-                    <button className='exBtn' onClick={this.hideShoulder}>Less Info</button>
-                </div>
                 
-            </div>
-            <div className='exercise' onMouseOver={this.showBack} onMouseLeave={this.hideBack}>
+            </Card>
+            <Card elevation='medium' className='exercise' onMouseOver={this.showBack} onMouseLeave={this.hideBack}>
                 <div className='exMain'>
                     <img src={this.state.backMoves[this.state.backNum].image} ></img>
-                    <div>
+                    <div className='exText'>
                         <h2>{this.state.backMoves[this.state.backNum].name}</h2>
-                        <div>
-                            <button className='exBtn' onClick={this.newBack}>New Exercise</button>
-                            <button className='exBtn' onClick={this.showBack}>More Info</button>
+                        <div className='block-buttons'>
+                            <Button  color='red' className='exBtn block-button' onClick={this.newBack} block>New Exercise</Button>
+                            <Button  color='red' className='exBtn block-button' onClick={this.showBack} block>More Info</Button>
                         </div>
+                        <div className={(this.state.hiddenBack) ? 'hiddenDesc' : 'exDesc'} >
+                            <h3>Instructions</h3>
+                            <ol>
+                                {this.state.backMoves[this.state.backNum].instructions.map(instruction => 
+                                <li >
+                                    {instruction}
+                                </li>)}
+                            </ol>
+                            <Button appearance='ghost' color='red' className='exBtn' onClick={this.hideBack}>Less Info</Button>
+                        </div>      
                     </div>
                 </div>
-                <div className={(this.state.hiddenBack) ? 'hiddenDesc' : 'exDesc'} >
-                <h3>Instructions</h3>
-                    <ol>
-                        {this.state.backMoves[this.state.backNum].instructions.map(instruction => 
-                        <li >
-                            {instruction}
-                        </li>)}
-                    </ol>
-                    <button className='exBtn' onClick={this.hideBack}>Less Info</button>
-                </div>
                 
-            </div>
-            <div className='exercise' onMouseOver={this.showBicep} onMouseLeave={this.hideBicep}>
+                
+            </Card>
+            <Card elevation='medium' className='exercise' onMouseOver={this.showBicep} onMouseLeave={this.hideBicep}>
                 <div className='exMain'>
                     <img src={this.state.bicepMoves[this.state.bicepNum].image} ></img>
-                    <div>
+                    <div className='exText'>
                         <h2>{this.state.bicepMoves[this.state.bicepNum].name}</h2>
-                        <div>
-                            <button className='exBtn' onClick={this.newBicep}>New Exercise</button>
-                            <button className='exBtn' onClick={this.showBicep}>More Info</button>
+                        <div className='block-buttons'>
+                            <Button  color='red' className='exBtn block-button' onClick={this.newBicep} block>New Exercise</Button>
+                            <Button  color='red' className='exBtn block-button' onClick={this.showBicep} block>More Info</Button>
+                        </div>
+                        <div className={(this.state.hiddenBicep) ? 'hiddenDesc' : 'exDesc'} >
+                            <h3>Instructions</h3>
+                            <ol>
+                                {this.state.bicepMoves[this.state.bicepNum].instructions.map(instruction => 
+                                <li >
+                                    {instruction}
+                                </li>)}
+                            </ol>
+                            <Button appearance='ghost' color='red' className='exBtn' onClick={this.hideBicep}>Less Info</Button>
                         </div>
                     </div>
                 </div>
-                <div className={(this.state.hiddenBicep) ? 'hiddenDesc' : 'exDesc'} >
-                <h3>Instructions</h3>
-                    <ol>
-                        {this.state.bicepMoves[this.state.bicepNum].instructions.map(instruction => 
-                        <li >
-                            {instruction}
-                        </li>)}
-                    </ol>
-                    <button className='exBtn' onClick={this.hideBicep}>Less Info</button>
-                </div>
                 
-            </div>
+                
+            </Card>
         </div>
     );
   }
