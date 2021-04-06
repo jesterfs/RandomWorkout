@@ -10,6 +10,10 @@ import LatPull from './images/latpull.jpg';
 import PullUp from './images/pullup.jpg';
 import EZBar from './images/ezbar.jpeg';
 import ConcCurls from './images/conccurls.jpeg';
+import Placeholder from './images/placeholder.png';
+import InclineBench from './images/inclinebench.jpg';
+import LegPress from './images/legpress.jpg';
+import ChestDip from './images/chestdip.jpg';
 import Store from './store.js'
 
 class Workout extends Component {
@@ -167,7 +171,7 @@ class Workout extends Component {
         )
     }
 
-
+    
     return (
         <div className="workout" >
             <div className='intro'>
@@ -188,7 +192,13 @@ class Workout extends Component {
                     </div>
                 </div>
                 <div className={(this.state.hiddenChest) ? 'hiddenDesc' : 'exDesc'} id='chestDesc'>
-                    <p>{this.state.chestMoves[this.state.chestNum].instructions}</p>
+                    <h3>Instructions</h3>
+                    <ol>
+                        {this.state.chestMoves[this.state.chestNum].instructions.map(instruction => 
+                        <li >
+                            {instruction}
+                        </li>)}
+                    </ol>
                     <button className='exBtn' onClick={this.hideChest}>Less Info</button>
                 </div>
                 
@@ -205,7 +215,13 @@ class Workout extends Component {
                     </div>
                 </div>
                 <div className={(this.state.hiddenLeg) ? 'hiddenDesc' : 'exDesc'} >
-                    <p>{this.state.legMoves[this.state.legNum].instructions}</p>
+                    <h3>Instructions</h3>
+                    <ol>
+                        {this.state.legMoves[this.state.legNum].instructions.map(instruction => 
+                        <li >
+                            {instruction}
+                        </li>)}
+                    </ol>
                     <button className='exBtn' onClick={this.hideLeg}>Less Info</button>
                 </div>
                 
@@ -222,7 +238,13 @@ class Workout extends Component {
                     </div>
                 </div>
                 <div className={(this.state.hiddenShoulder) ? 'hiddenDesc' : 'exDesc'} >
-                    <p>{this.state.shoulderMoves[this.state.shoulderNum].instructions}</p>
+                <h3>Instructions</h3>
+                    <ol>
+                        {this.state.shoulderMoves[this.state.shoulderNum].instructions.map(instruction => 
+                        <li >
+                            {instruction}
+                        </li>)}
+                    </ol>
                     <button className='exBtn' onClick={this.hideShoulder}>Less Info</button>
                 </div>
                 
@@ -239,7 +261,13 @@ class Workout extends Component {
                     </div>
                 </div>
                 <div className={(this.state.hiddenBack) ? 'hiddenDesc' : 'exDesc'} >
-                    <p>{this.state.backMoves[this.state.backNum].instructions}</p>
+                <h3>Instructions</h3>
+                    <ol>
+                        {this.state.backMoves[this.state.backNum].instructions.map(instruction => 
+                        <li >
+                            {instruction}
+                        </li>)}
+                    </ol>
                     <button className='exBtn' onClick={this.hideBack}>Less Info</button>
                 </div>
                 
@@ -256,7 +284,13 @@ class Workout extends Component {
                     </div>
                 </div>
                 <div className={(this.state.hiddenBicep) ? 'hiddenDesc' : 'exDesc'} >
-                    <p>{this.state.bicepMoves[this.state.bicepNum].instructions}</p>
+                <h3>Instructions</h3>
+                    <ol>
+                        {this.state.bicepMoves[this.state.bicepNum].instructions.map(instruction => 
+                        <li >
+                            {instruction}
+                        </li>)}
+                    </ol>
                     <button className='exBtn' onClick={this.hideBicep}>Less Info</button>
                 </div>
                 
