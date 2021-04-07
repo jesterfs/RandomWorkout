@@ -52,22 +52,22 @@ let Store = {
         {
             name: 'Chest Dips',
             image: ChestDip,
-            instructions: ['Lorem ipsum dolor sit amet', 'consectetur adipiscing elit', 'sed do eiusmod tempor incididunt', 'ut labore et dolore magna aliqua', 'Ut enim ad minim veniam']
+            instructions: ['Hold your body up on two horizontal bars', 'Leaning forward slightly, lower your body down until your elbows are 90 degrees', 'Push your body back up to start']
         },
         {
             name: 'Incline Bench Press',
             image: InclineBench,
-            instructions: ['Lorem ipsum dolor sit amet', 'consectetur adipiscing elit', 'sed do eiusmod tempor incididunt', 'ut labore et dolore magna aliqua', 'Ut enim ad minim veniam']
+            instructions: ['On an incline bench, lift the bar off the hooks', 'Lower it to your upper chest', 'Push back up until arms are nearly straight']
         },
         {
             name: 'Decline Bench Press',
             image: DeclineBench,
-            instructions: ['Lorem ipsum dolor sit amet', 'consectetur adipiscing elit', 'sed do eiusmod tempor incididunt', 'ut labore et dolore magna aliqua', 'Ut enim ad minim veniam']
+            instructions: ['On a decline bench, lift the bar off the hooks', 'Lower it to your lower chest', 'Push back up until arms are nearly straight']
         },
         {
             name: 'High Cable Crossover',
             image: HighCableCross,
-            instructions: ['Lorem ipsum dolor sit amet', 'consectetur adipiscing elit', 'sed do eiusmod tempor incididunt', 'ut labore et dolore magna aliqua', 'Ut enim ad minim veniam']
+            instructions: ['On a two tower pully system, position each pully above your head', 'Grab the handles at head height', 'Using your pecs, bring your hands together at navel height, squeezing your chest muscles at the bottom', 'Let hands return to start']
         },
     ],
     legMoves: [
@@ -79,12 +79,12 @@ let Store = {
         {
             name: 'Deadlift',
             image: DeadLift,
-            instructions: ['Lorem ipsum dolor sit amet', 'consectetur adipiscing elit', 'sed do eiusmod tempor incididunt', 'ut labore et dolore magna aliqua', 'Ut enim ad minim veniam']
+            instructions: ['Stand with your feet at hip width the the barbell resting on against your shins', 'Lean forward and grasp the bar just outside of leg width', 'Bend your knees, sit back into your hips, and straighten your back, letting the barbell anchor you', 'Stand up by driving your hips forward', 'Reverse the motion and return the bar to the ground']
         },
         {
             name: 'Leg Press',
             image: LegPress,
-            instructions: ['Lorem ipsum dolor sit amet', 'consectetur adipiscing elit', 'sed do eiusmod tempor incididunt', 'ut labore et dolore magna aliqua', 'Ut enim ad minim veniam']
+            instructions: ['Sit with your feet up against the platform and your knees close to 90 degrees', 'Driving through your heels, push the plaform away from you and straighten your legs', 'return the platform to the starting position']
         },
         {
             name: 'Split Squat',
