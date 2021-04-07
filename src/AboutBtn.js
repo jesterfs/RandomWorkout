@@ -37,7 +37,7 @@ class AboutBtn extends React.Component{
             </Drawer.Header>
             <Drawer.Body>
                 <h3>What is RandoFit?</h3>
-                <p>RandoFit is a tool to help you change up your workout. Everytime you click the button, we randomly select exercises to make generate a new full body workout.</p>
+                <p>RandoFit is a tool to help you change up your workout. Everytime you click the button, we randomly select exercises to generate a new full body workout.</p>
                 <hr></hr>
                 <h3>Can RandoFit Replace a Professional Trainer?</h3>
                 <p>
