@@ -12,6 +12,22 @@ import Placeholder from './images/placeholder.png';
 import InclineBench from './images/inclinebench.jpg';
 import LegPress from './images/legpress.jpg';
 import ChestDip from './images/chestdip.jpg';
+import ArnoldPress from './images/arnoldpress.jpg';
+import BarbellRow from './images/barbellrow.jpg';
+import BoxJump from './images/boxjump.jpg';
+import CableRow from './images/cablerow.png';
+import DeclineBench from './images/declinebench.png';
+import DragCurls from './images/dragcurls.jpg';
+import DumbbellFly from './images/dumbbellfly.jpg';
+import DumbbellRow from './images/dumbbellrow.jpg';
+import FrontRaise from './images/frontraise.jpg';
+import HighCableCross from './images/highcablecross.jpg';
+import Lunge from './images/lunge.jpg';
+import PreacherCurl from './images/preachercurl.jpg';
+import ReverseCurl from './images/reversecurl.png';
+import SplitSquat from './images/splitsquat.png';
+import RearDeltFly from './images/reardeltfly.jpg';
+
 
 let Store = {
     chestMoves: [
@@ -30,8 +46,8 @@ let Store = {
         },
         {
             name: 'Dumbbell Fly',
-            image: Placeholder,
-            instructions: ['Lorem ipsum dolor sit amet', 'consectetur adipiscing elit', 'sed do eiusmod tempor incididunt', 'ut labore et dolore magna aliqua', 'Ut enim ad minim veniam']
+            image: DumbbellFly,
+            instructions: ['Lay on a flat bench holding two dumbbells above your chest', 'Without bending your elbows, slowly lower your arms to parallel', 'Squeezing your pecs, return the weights to the starting position']
         },
         {
             name: 'Chest Dips',
@@ -45,12 +61,12 @@ let Store = {
         },
         {
             name: 'Decline Bench Press',
-            image: Placeholder,
+            image: DeclineBench,
             instructions: ['Lorem ipsum dolor sit amet', 'consectetur adipiscing elit', 'sed do eiusmod tempor incididunt', 'ut labore et dolore magna aliqua', 'Ut enim ad minim veniam']
         },
         {
             name: 'High Cable Crossover',
-            image: Placeholder,
+            image: HighCableCross,
             instructions: ['Lorem ipsum dolor sit amet', 'consectetur adipiscing elit', 'sed do eiusmod tempor incididunt', 'ut labore et dolore magna aliqua', 'Ut enim ad minim veniam']
         },
     ],
@@ -66,23 +82,23 @@ let Store = {
             instructions: ['Lorem ipsum dolor sit amet', 'consectetur adipiscing elit', 'sed do eiusmod tempor incididunt', 'ut labore et dolore magna aliqua', 'Ut enim ad minim veniam']
         },
         {
-            name: 'Lunge',
+            name: 'Leg Press',
             image: LegPress,
             instructions: ['Lorem ipsum dolor sit amet', 'consectetur adipiscing elit', 'sed do eiusmod tempor incididunt', 'ut labore et dolore magna aliqua', 'Ut enim ad minim veniam']
         },
         {
             name: 'Split Squat',
-            image: Placeholder,
+            image: SplitSquat,
             instructions: ['Lorem ipsum dolor sit amet', 'consectetur adipiscing elit', 'sed do eiusmod tempor incididunt', 'ut labore et dolore magna aliqua', 'Ut enim ad minim veniam']
         },
         {
-            name: 'Leg Press',
-            image: Placeholder,
+            name: 'Lunge',
+            image: Lunge,
             instructions: ['Lorem ipsum dolor sit amet', 'consectetur adipiscing elit', 'sed do eiusmod tempor incididunt', 'ut labore et dolore magna aliqua', 'Ut enim ad minim veniam']
         },
         {
             name: 'Box Jump',
-            image: Placeholder,
+            image: BoxJump,
             instructions: ['Lorem ipsum dolor sit amet', 'consectetur adipiscing elit', 'sed do eiusmod tempor incididunt', 'ut labore et dolore magna aliqua', 'Ut enim ad minim veniam']
         },
       ],
@@ -99,17 +115,17 @@ let Store = {
         },
         {
             name: 'Front Raise',
-            image: Placeholder,
+            image: FrontRaise,
             instructions: ['Lorem ipsum dolor sit amet', 'consectetur adipiscing elit', 'sed do eiusmod tempor incididunt', 'ut labore et dolore magna aliqua', 'Ut enim ad minim veniam']
         },
         {
             name: 'Rear Delt Fly',
-            image: Placeholder,
+            image: RearDeltFly,
             instructions: ['Lorem ipsum dolor sit amet', 'consectetur adipiscing elit', 'sed do eiusmod tempor incididunt', 'ut labore et dolore magna aliqua', 'Ut enim ad minim veniam']
         },
         {
             name: 'Arnold Press',
-            image: Placeholder,
+            image: ArnoldPress,
             instructions: ['Lorem ipsum dolor sit amet', 'consectetur adipiscing elit', 'sed do eiusmod tempor incididunt', 'ut labore et dolore magna aliqua', 'Ut enim ad minim veniam']
         },
       ],
@@ -126,17 +142,17 @@ let Store = {
         },
         {
             name: 'Cable Row',
-            image: Placeholder,
+            image: CableRow,
             instructions: ['Lorem ipsum dolor sit amet', 'consectetur adipiscing elit', 'sed do eiusmod tempor incididunt', 'ut labore et dolore magna aliqua', 'Ut enim ad minim veniam']
         },
         {
             name: 'Barbell Row',
-            image: Placeholder,
+            image: BarbellRow,
             instructions: ['Lorem ipsum dolor sit amet', 'consectetur adipiscing elit', 'sed do eiusmod tempor incididunt', 'ut labore et dolore magna aliqua', 'Ut enim ad minim veniam']
         },
         {
             name: 'Dumbbell Row',
-            image: Placeholder,
+            image: DumbbellRow,
             instructions: ['Lorem ipsum dolor sit amet', 'consectetur adipiscing elit', 'sed do eiusmod tempor incididunt', 'ut labore et dolore magna aliqua', 'Ut enim ad minim veniam']
         },
       ],
@@ -153,17 +169,17 @@ let Store = {
         },
         {
             name: 'Reverse Curl',
-            image: Placeholder,
+            image: ReverseCurl,
             instructions: ['Lorem ipsum dolor sit amet', 'consectetur adipiscing elit', 'sed do eiusmod tempor incididunt', 'ut labore et dolore magna aliqua', 'Ut enim ad minim veniam']
         },
         {
             name: 'Preacher Curl',
-            image: Placeholder,
+            image: PreacherCurl,
             instructions: ['Lorem ipsum dolor sit amet', 'consectetur adipiscing elit', 'sed do eiusmod tempor incididunt', 'ut labore et dolore magna aliqua', 'Ut enim ad minim veniam']
         },
         {
             name: 'Drag Curl',
-            image: Placeholder,
+            image: DragCurls,
             instructions: ['Lorem ipsum dolor sit amet', 'consectetur adipiscing elit', 'sed do eiusmod tempor incididunt', 'ut labore et dolore magna aliqua', 'Ut enim ad minim veniam']
         },
       ],
