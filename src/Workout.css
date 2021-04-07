@@ -8,6 +8,8 @@
     /* border-radius: 5%; */
 }
 
+
+
 .exMain {
     display: flex;
     flex-direction: row;
@@ -31,12 +33,13 @@
 
 .exBtn {
     width: 100px;
-    margin: 0 5px 0 5px;
-    text-align: center;
-    padding: 0 auto 0 auto;
+    margin: 0 0 0 0;
+    
+    
+    
 }
 
-img {
+.exImg {
     width: 100px;
     height: 100px;
     padding: 5px;
@@ -54,12 +57,57 @@ img {
 
 .exDesc {
     display: inline;
+    width: 100%;
 }
 
 .introBtn {
     
     margin-top: 20px;
 }
+
+
+
+ol {
+    text-align: left;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.block-buttons {
+    width: 100%;
+    
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.titleHead {
+    font-size: large;
+}
+
+.exHead {
+    font-size: medium;
+}
+
+.exHeadDef {
+    font-size: small;
+}
+
+@media only screen and (min-width: 300px) {
+    .block-buttons {
+        width: 75%;
+        
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .titleHead {
+        font-size: x-large;
+    }
+    .exHead {
+        font-size: large;
+    }
+    
+  }
 
 @media only screen and (min-width: 600px) {
     .workout {
@@ -69,17 +117,23 @@ img {
         margin-bottom: 20px;
         margin-top: 20px;
     }
+    .block-buttons {
+        width: 50%;
+        
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .titleHead {
+        font-size: xx-large;
+    }
+
+    .exHead {
+        font-size: x-large;
+    }
+
+    
   }
 
-ol {
-    text-align: left;
-    width: 50%;
-    margin-left: auto;
-    margin-right: auto;
-}
+  
 
-.block-buttons {
-    width: 50%;
-    margin-left: auto;
-    margin-right: auto;
-}
+  

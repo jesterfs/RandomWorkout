@@ -1,0 +1,16 @@
+
+
+@media only screen and (max-width: 500px) {
+    .drawer {
+        width: 100% !important;
+    }
+    
+  }
+
+@media only screen and (max-width: 1000px) {
+    .drawer {
+        width: 90% !important;
+    }
+
+    
+  }

@@ -1,40 +1,33 @@
-.navContainer {
-    background-color: red;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding-left: 100px;
-    padding-right: 100px;
+.navImg {
+    width: 90%;
+    margin: 0 auto 10px auto;
+    padding-top: 30px;
 }
 
-.navLinks {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: flex-end;
+.logo {
+    width: 100%;
 }
 
 a {
-    margin: 10px;
     text-decoration: none;
-    color: black;
+    color: grey;
+    font-size: smaller;
+    
 }
 
-a:hover {
-    color: gray;
-}
-
-#fillerLink {
-    visibility: hidden;
-    display: none;
-}
+@media only screen and (min-width: 300px) {
+    .navImg {
+        width: 75%;
+        
+    }
+    
+  }
 
 @media only screen and (min-width: 600px) {
-    .navContainer {
-      flex-direction: row;
-    }
 
-    #fillerLink {
-        display: inline;
+    .navImg {
+        width: 50%;
+        
     }
+    
   }
