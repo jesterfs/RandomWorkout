@@ -17,3 +17,8 @@ html {
   background-color: #F0F0F0;
 }
 
+input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
