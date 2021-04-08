@@ -32,9 +32,8 @@ import SplitSquat from './images/splitsquat.png';
 import RearDeltFly from './images/reardeltfly.jpg';
 import Store from './store.js'
 
-import { Button } from "rsuite"
+import { Button } from "rsuite";
 import 'rsuite/dist/styles/rsuite-default.css';
-// import { withStyles } from '@material-ui/core/styles';
 import { Card } from 'grommet';
 
 
@@ -208,8 +207,8 @@ class Workout extends Component {
                     <div className='exText'>
                         <h2 className='exHead'>{this.state.chestMoves[this.state.chestNum].name}</h2>
                         <div className='block-buttons'>
-                            <Button  color='red' className='exBtn block-button' label='New Exercise' onClick={this.newChest} block>New Exercise</Button>
-                            <Button  color='red' className='exBtn block-button' onClick={this.showChest} block>More Info</Button>
+                            <Button  color='red' className='exBtn block-buttons' label='New Exercise' onClick={this.newChest} block>New Exercise</Button>
+                            <Button  color='red' className='exBtn block-buttons' onClick={this.showChest} block>More Info</Button>
                         </div>
                         
                     </div>
@@ -232,8 +231,8 @@ class Workout extends Component {
                     <div className='exText'>
                         <h2 className='exHead'>{this.state.legMoves[this.state.legNum].name}</h2>
                         <div className='block-buttons'>
-                            <Button  color='red' className='exBtn block-button' onClick={this.newLeg} block>New Exercise</Button>
-                            <Button  color='red' className='exBtn block-button' onClick={this.showLeg} block>More Info</Button>
+                            <Button  color='red' className='exBtn block-buttons' onClick={this.newLeg} block>New Exercise</Button>
+                            <Button  color='red' className='exBtn block-buttons' onClick={this.showLeg} block>More Info</Button>
                         </div>
                     </div>
                 </div>
@@ -255,8 +254,8 @@ class Workout extends Component {
                     <div className='exText'>
                         <h2 className='exHead'>{this.state.shoulderMoves[this.state.shoulderNum].name}</h2>
                         <div className='block-buttons'>
-                            <Button  color='red' className='exBtn block-button' onClick={this.newShoulder} block>New Exercise</Button>
-                            <Button  color='red' className='exBtn block-button' onClick={this.showShoulder} block>More Info</Button>
+                            <Button  color='red' className='exBtn block-buttons' onClick={this.newShoulder} block>New Exercise</Button>
+                            <Button  color='red' className='exBtn block-buttons' onClick={this.showShoulder} block>More Info</Button>
                         </div>
                     </div>
                 </div>
@@ -277,8 +276,8 @@ class Workout extends Component {
                     <div className='exText'>
                         <h2 className='exHead'>{this.state.backMoves[this.state.backNum].name}</h2>
                         <div className='block-buttons'>
-                            <Button  color='red' className='exBtn block-button'  onClick={this.newBack} block>New Exercise</Button>
-                            <Button  color='red' className='exBtn block-button' onClick={this.showBack} block>More Info</Button>
+                            <Button  color='red' className='exBtn block-buttons'  onClick={this.newBack} block>New Exercise</Button>
+                            <Button  color='red' className='exBtn block-buttons' onClick={this.showBack} block>More Info</Button>
                         </div>
                              
                     </div>
@@ -301,8 +300,8 @@ class Workout extends Component {
                     <div className='exText'>
                         <h2 className='exHead'>{this.state.bicepMoves[this.state.bicepNum].name}</h2>
                         <div className='block-buttons'>
-                            <Button  color='red' className='exBtn block-button' onClick={this.newBicep} block>New Exercise</Button>
-                            <Button  color='red' className='exBtn block-button' onClick={this.showBicep} block>More Info</Button>
+                            <Button  color='red' className='exBtn block-buttons' onClick={this.newBicep} block>New Exercise</Button>
+                            <Button  color='red' className='exBtn block-buttons' onClick={this.showBicep} block>More Info</Button>
                         </div>
                         
                     </div>
