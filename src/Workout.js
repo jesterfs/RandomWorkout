@@ -203,7 +203,7 @@ class Workout extends Component {
            
             <Card elevation='medium' round='small'  className='exercise' onMouseOver={this.showChest} onMouseLeave={this.hideChest}>
                 <div className='exMain'>
-                    <img className='exImg' src={this.state.chestMoves[this.state.chestNum].image} ></img>
+                    <img className='exImg' alt='picture of the exercise' src={this.state.chestMoves[this.state.chestNum].image} ></img>
                     <div className='exText'>
                         <h2 className='exHead'>{this.state.chestMoves[this.state.chestNum].name}</h2>
                         <div className='block-buttons'>
@@ -227,7 +227,7 @@ class Workout extends Component {
             </Card>
             <Card elevation='medium' className='exercise' onMouseOver={this.showLeg} onMouseLeave={this.hideLeg}>
                 <div className='exMain'>
-                    <img className='exImg' src={this.state.legMoves[this.state.legNum].image} ></img>
+                    <img className='exImg' alt='picture of the exercise' src={this.state.legMoves[this.state.legNum].image} ></img>
                     <div className='exText'>
                         <h2 className='exHead'>{this.state.legMoves[this.state.legNum].name}</h2>
                         <div className='block-buttons'>
@@ -250,7 +250,7 @@ class Workout extends Component {
             </Card>
             <Card elevation='medium' className='exercise' onMouseOver={this.showShoulder} onMouseLeave={this.hideShoulder}>
                 <div className='exMain'>
-                    <img className='exImg' src={this.state.shoulderMoves[this.state.shoulderNum].image} ></img>
+                    <img className='exImg' alt='picture of the exercise' src={this.state.shoulderMoves[this.state.shoulderNum].image} ></img>
                     <div className='exText'>
                         <h2 className='exHead'>{this.state.shoulderMoves[this.state.shoulderNum].name}</h2>
                         <div className='block-buttons'>
@@ -272,7 +272,7 @@ class Workout extends Component {
             </Card>
             <Card elevation='medium' className='exercise' onMouseOver={this.showBack} onMouseLeave={this.hideBack}>
                 <div className='exMain'>
-                    <img className='exImg' src={this.state.backMoves[this.state.backNum].image} ></img>
+                    <img className='exImg' alt='picture of the exercise' src={this.state.backMoves[this.state.backNum].image} ></img>
                     <div className='exText'>
                         <h2 className='exHead'>{this.state.backMoves[this.state.backNum].name}</h2>
                         <div className='block-buttons'>
@@ -296,7 +296,7 @@ class Workout extends Component {
             </Card>
             <Card elevation='medium' className='exercise' onMouseOver={this.showBicep} onMouseLeave={this.hideBicep}>
                 <div className='exMain'>
-                    <img className='exImg' src={this.state.bicepMoves[this.state.bicepNum].image} ></img>
+                    <img className='exImg' alt='picture of the exercise' src={this.state.bicepMoves[this.state.bicepNum].image} ></img>
                     <div className='exText'>
                         <h2 className='exHead'>{this.state.bicepMoves[this.state.bicepNum].name}</h2>
                         <div className='block-buttons'>

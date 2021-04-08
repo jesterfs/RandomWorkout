@@ -17,7 +17,7 @@ class Workout extends Component {
     return (
        <div className='navContainer'>
            <div className='navImg'>
-                <img className='logo' src={Logo}></img>
+                <img className='logo' alt='RandoFit logo' src={Logo}></img>
            </div>
            <div className='navLinks'>
                 <AboutBtn />
