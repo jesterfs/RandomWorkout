@@ -1,17 +1,24 @@
 .exercise {
     border-style: solid;
     border-width: 3px;
-    border-color: black;
+    border-color: lightgray;
+    background-color: lightgray;
     width: 100%;
     margin: 5px auto 5px auto ;
-    
+    /* border-radius: 5%; */
 }
+
+
 
 .exMain {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+    width: 100%;
 }
 
 
@@ -21,18 +28,32 @@
     width: 90%;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 30PX;
+    margin-bottom: 30px;
+    
 }
 
 .exBtn {
-    width: 100px;
-    margin: 0 5px 0 5px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    
+    
+    
 }
 
-img {
+.exImg {
     width: 100px;
     height: 100px;
     padding: 5px;
+    
+}
+
+.exText {
+    flex: 2;
+    text-align: center;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .hiddenDesc {
@@ -41,26 +62,138 @@ img {
 
 .exDesc {
     display: inline;
+    /* width: 100%; */
 }
 
-.intro {
-    margin-bottom: 30px;
-    /* display: none; */
+.introBtn {
+    
+    margin-top: 20px;
 }
 
-@media only screen and (min-width: 600px) {
+
+
+ol {
+    text-align: left;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.block-buttons {
+    width: 90%;
+    
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.titleHead {
+    font-size: large;
+}
+
+.exHead {
+    font-size: medium;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.exHeadDef {
+    font-size: small;
+}
+
+
+
+@media only screen and (min-width: 300px) {
+
+    .exMain {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 20px;
+    }
+
+    .block-buttons {
+        width: 100%;
+        
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .titleHead {
+        font-size: x-large;
+    }
+    .exHead {
+        font-size: large;
+    }
+    
+  }
+
+  @media only screen and (min-width: 350px) {
+    .block-buttons {
+        width: 100%;
+        
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+  }
+
+  @media only screen and (min-width: 400px) {
+    .exMain {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 20px;
+    }  
+    .block-buttons {
+        width: 90%;
+        
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+  }
+
+
+@media only screen and (min-width: 700px) {
+    .exMain {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        margin-left: 30px;
+        margin-right: 30px;
+        margin-bottom: 20px;
+    }  
     .workout {
       width: 50%;
     }
     .intro {
-        margin-bottom: 30px;
-        display: inline;
+        margin-bottom: 20px;
+        margin-top: 20px;
     }
+    .block-buttons {
+        width: 85%;
+        
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .titleHead {
+        font-size: xx-large;
+    }
+
+    .exHead {
+        font-size: large;
+    }
+
+    
   }
 
-ol {
-    text-align: left;
-    width: 50%;
-    margin-left: auto;
-    margin-right: auto;
-}
+  
+
+  

@@ -16,34 +16,74 @@ import LegPress from './images/legpress.jpg';
 import ChestDip from './images/chestdip.jpg';
 import Store from './store.js'
 
+import { Button } from "rsuite";
+import 'rsuite/dist/styles/rsuite-default.css';
+import { Card } from 'grommet';
+
 class ExCard extends Component {
-  
+    constructor(props) {
+        super(props);
+        console.log(this.props);
+      }
+
+    state = {
+        hidden: true,
+        number: this.props.number
+    }
+
+    showInstructions = () => {
+        this.setState({hidden: false})
+      }
+    
+    hideInstructions = () => {
+        this.setState({hidden: true})
+      }
+
+    // newEx = () => {
+    //     let length = this.props.exercise.length
+    //     let newNum = this.state.number + 1    
+    //     if(newNum > length - 1) {
+    //         newNum = 0
+    //     }
+    //     this.setState({
+    //         number: newNum,
+    //     })
+    // }
+
+    componentWillReceiveProps() {
+        this.setState({number: this.props.number})
+    }
+
   render() {  
 
     
     return (
-        <div className="workout" >
-            <div className='exMain'>
-                    <img src={this.props.image} ></img>
-                    <div>
-                        <h2>{this.props.name}</h2>
-                        <div>
-                            <button className='exBtn' onClick={this.newChest}>New Exercise</button>
-                            <button className='exBtn' onClick={this.showChest}>More Info</button>
+        
+            <Card className='workout' elevation='medium' round='small'  className='exercise' onMouseOver={this.showInstructions} onMouseLeave={this.hideInstructions}>
+                <div className='exMain'>
+                    <img className='exImg' alt='picture of the exercise' src={this.props.exercise[this.props.number].image} ></img>
+                    <div className='exText'>
+                        <h2 className='exHead'>{this.props.exercise[this.props.number].name}</h2>
+                        <div className='block-buttons'>
+                            <Button  color='red' className='exBtn block-buttons' label='New Exercise' onClick={this.props.newEx} block>New Exercise</Button>
+                            <Button  color='red' className='exBtn block-buttons' onClick={this.showInstructions} block>More Info</Button>
                         </div>
+                        
                     </div>
                 </div>
-                <div className={(this.state.hiddenChest) ? 'hiddenDesc' : 'exDesc'} id='chestDesc'>
+                <div className={(this.state.hidden) ? 'hiddenDesc' : 'exDesc'} id='chestDesc'>
                     <h3>Instructions</h3>
                     <ol>
-                        {this.state.chestMoves[this.state.chestNum].instructions.map(instruction => 
+                        {this.props.exercise[this.props.number].instructions.map(instruction => 
                         <li >
                             {instruction}
                         </li>)}
                     </ol>
-                    <button className='exBtn' onClick={this.hideChest}>Less Info</button>
+                    <Button appearance='ghost' color='red' className='exBtn' onClick={this.hideInstructions}>Less Info</Button>
                 </div>
-        </div>
+                
+            </Card>
+       
     );
   }
 }

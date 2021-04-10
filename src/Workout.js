@@ -36,6 +36,8 @@ import { Button } from "rsuite";
 import 'rsuite/dist/styles/rsuite-default.css';
 import { Card } from 'grommet';
 
+import ExCard from './ExCard.js'
+
 
 class Workout extends Component {
   state = {
@@ -74,7 +76,9 @@ class Workout extends Component {
         backNum: this.getRandomInt(backLength),
         bicepNum: this.getRandomInt(bicepLength),
     })
+    
   }
+
 
   newChest = () => {
     let chestLength = this.state.chestMoves.length
@@ -98,17 +102,6 @@ class Workout extends Component {
     })
   }
 
-  newShoulder = () => {
-    let shoulderLength = this.state.shoulderMoves.length
-    let newNum = this.state.shoulderNum + 1    
-    if(newNum > shoulderLength - 1) {
-        newNum = 0
-    }
-    this.setState({
-        shoulderNum: newNum,
-    })
-  }
-
   newBack = () => {
     let backLength = this.state.backMoves.length
     let newNum = this.state.backNum + 1    
@@ -119,6 +112,18 @@ class Workout extends Component {
         backNum: newNum,
     })
   }
+
+  newShoulder = () => {
+    let shoulderLength = this.state.shoulderMoves.length
+    let newNum = this.state.shoulderNum + 1    
+    if(newNum > shoulderLength - 1) {
+        newNum = 0
+    }
+    this.setState({
+        shoulderNum: newNum,
+    })
+  }
+  
 
   newBicep = () => {
     let bicepLength = this.state.bicepMoves.length
@@ -131,45 +136,7 @@ class Workout extends Component {
     })
   }
 
-  showChest = () => {
-    this.setState({hiddenChest: false})
-  }
-
-  hideChest = () => {
-    this.setState({hiddenChest: true})
-  }
-
-  showLeg = () => {
-    this.setState({hiddenLeg: false})
-  }
-
-  hideLeg = () => {
-    this.setState({hiddenLeg: true})
-  }
-
-  showShoulder = () => {
-    this.setState({hiddenShoulder: false})
-  }
-
-  hideShoulder = () => {
-    this.setState({hiddenShoulder: true})
-  }
-
-  showBack = () => {
-    this.setState({hiddenBack: false})
-  }
-
-  hideBack = () => {
-    this.setState({hiddenBack: true})
-  }
-
-  showBicep = () => {
-    this.setState({hiddenBicep: false})
-  }
-
-  hideBicep = () => {
-    this.setState({hiddenBicep: true})
-  }
+  
 
 
   
@@ -196,6 +163,16 @@ class Workout extends Component {
     return (
         <div className="workout" >
             <div className='intro'>
+                <h1 className='titleHead'>Welcome to RandoFit!</h1>
+                <p>Are you lost in the gym? Sick of your workout plan? Maybe you just need a change of pace. RandoFit is here to help. Just click the button below, and we'll generate a random, full body work out for you.</p>
+                <Button  className='introBtn' color='red' onClick={this.newWorkout} block>New Workout</Button>
+            </div>
+            <ExCard exercise={this.state.chestMoves} number={this.state.chestNum} newEx={this.newChest} />
+            <ExCard exercise={this.state.legMoves} number={this.state.legNum} newEx={this.newLeg} />
+            <ExCard exercise={this.state.backMoves} number={this.state.backNum} newEx={this.newBack} />
+            <ExCard exercise={this.state.shoulderMoves} number={this.state.shoulderNum} newEx={this.newShoulder} />
+            <ExCard exercise={this.state.bicepMoves} number={this.state.bicepNum} newEx={this.newBicep}  />
+            {/* <div className='intro'>
                 <h1 className='titleHead'>Welcome to RandoFit!</h1>
                 <p>Are you lost in the gym? Sick of your workout plan? Maybe you just need a change of pace. RandoFit is here to help. Just click the button below, and we'll generate a random, full body work out for you.</p>
                 <Button className='introBtn' color='red' onClick={this.newWorkout} block>New Workout</Button>
@@ -317,7 +294,7 @@ class Workout extends Component {
                     <Button appearance='ghost' color='red' className='exBtn' onClick={this.hideBicep}>Less Info</Button>
                 </div>
                 
-            </Card>
+            </Card> */}
         </div>
     );
   }

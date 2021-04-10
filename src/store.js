@@ -89,17 +89,17 @@ let Store = {
         {
             name: 'Split Squat',
             image: SplitSquat,
-            instructions: ['Lorem ipsum dolor sit amet', 'consectetur adipiscing elit', 'sed do eiusmod tempor incididunt', 'ut labore et dolore magna aliqua', 'Ut enim ad minim veniam']
+            instructions: ['Stand with one foot slightly in front of you, and the other raised up on a bench behind you', 'Bend your front knee, trying to only use the back leg for balance', 'Lower until your front knee is near 90 degrees', 'Drive up using your quads and glutes until back at start']
         },
         {
             name: 'Lunge',
             image: Lunge,
-            instructions: ['Lorem ipsum dolor sit amet', 'consectetur adipiscing elit', 'sed do eiusmod tempor incididunt', 'ut labore et dolore magna aliqua', 'Ut enim ad minim veniam']
+            instructions: ['Start with your fit hip width apart', 'Step one foot forward and bend that knee until it is near 90 degrees', 'Drive up through your quads and glutes as you step the back foot forward', 'Repeat on the other side']
         },
         {
             name: 'Box Jump',
             image: BoxJump,
-            instructions: ['Lorem ipsum dolor sit amet', 'consectetur adipiscing elit', 'sed do eiusmod tempor incididunt', 'ut labore et dolore magna aliqua', 'Ut enim ad minim veniam']
+            instructions: ['Stand in front of a plyometric box or another sturdy platform', 'Move your hips backwards until you feel your hamstrings tighten', 'Drive your hips forward as you jump into the air to land on the box', 'Step down and repeat']
         },
       ],
       shoulderMoves: [
@@ -158,29 +158,29 @@ let Store = {
       ],
       bicepMoves: [
         {
-            name: 'EZ Bar Curl',
+            name: 'Barbell Curl',
             image: EZBar,
-            instructions: ['Lorem ipsum dolor sit amet', 'consectetur adipiscing elit', 'sed do eiusmod tempor incididunt', 'ut labore et dolore magna aliqua', 'Ut enim ad minim veniam']
+            instructions: ['With an underhand grip, grab a barbell at hust wider than hips width', 'Start with your arms hanging down and the bar touching your thighs', 'Bend your elbows while keeping them stationary', 'Bring the bar up until your arms are fully bent', 'Lower back to start, stopping just short of locking out.']
         },
         {
             name: 'Concentration Curl',
             image: ConcCurls,
-            instructions: ['Lorem ipsum dolor sit amet', 'consectetur adipiscing elit', 'sed do eiusmod tempor incididunt', 'ut labore et dolore magna aliqua', 'Ut enim ad minim veniam']
+            instructions: ['Sit on the edge of a bench with a dumbbell hanging in one hand between your legs', 'Rest your arm along the innter thigh to keep it stationary', 'Bend your elbow while keeping it stationary', 'Bring the dumbbell up until your arm is fully bent', 'Lower back to start, stopping just short of locking out.']
         },
         {
             name: 'Reverse Curl',
             image: ReverseCurl,
-            instructions: ['Lorem ipsum dolor sit amet', 'consectetur adipiscing elit', 'sed do eiusmod tempor incididunt', 'ut labore et dolore magna aliqua', 'Ut enim ad minim veniam']
+            instructions: ['With an overhand grip, grab a barbell at hust wider than hips width', 'Start with your arms hanging down and the bar touching your thighs', 'Bend your elbows while keeping them stationary', 'Bring the bar up until your arms are fully bent', 'Lower back to start, stopping just short of locking out.']
         },
         {
             name: 'Preacher Curl',
             image: PreacherCurl,
-            instructions: ['Lorem ipsum dolor sit amet', 'consectetur adipiscing elit', 'sed do eiusmod tempor incididunt', 'ut labore et dolore magna aliqua', 'Ut enim ad minim veniam']
+            instructions: ['Sit on a preacher curl bench with your arms resting on the front pad, holding a barbell with an underhand grip', 'Keeping your upper arms against the pad, bend your elbows and bring the bar up towards your chin', 'Lower back to start, stopping just short of locking out.']
         },
         {
             name: 'Drag Curl',
             image: DragCurls,
-            instructions: ['Lorem ipsum dolor sit amet', 'consectetur adipiscing elit', 'sed do eiusmod tempor incididunt', 'ut labore et dolore magna aliqua', 'Ut enim ad minim veniam']
+            instructions: ['Hold two dumbbells with your arms fully extended down, palms facing forward', 'Bend your elbows, but let them move behind your body', 'Allow the weights to "drag" up your body until your arms are fully bent', 'Lower back to start, stopping just short of locking out.']
         },
       ],
 }
