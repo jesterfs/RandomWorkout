@@ -46,14 +46,20 @@ class AboutBtn extends React.Component{
                     While our workouts will give you a fullbody pump, it can't replace a professional.
                 </p>
                 <hr></hr>
+                <h3>I Keep Getting the Same Exercise Twice in a Row. What happened?</h3>
+                <p>
+                    RandoFit essentially works like a dice roll. With a six sided die, you might get 4 twice in a row pretty often. As we add
+                    add exercises, that six sided die becomes a 20 sided die, then a 40 sided die, etc, and your chances of a hitting 4 twice in a row shrinks.
+                    In the mean time, if you ahve an exercise you hate that keeps popping up, just hit the "New Exercise" button to change it up.
+                </p>
+                <hr></hr>
                 <h3>Can I Get a Different Style of Workout?</h3>
                 <p>
                     We're working on it! Soon, you'll have the option to select common split days (Like Push/Pull, Legs, or Arms). We're also
                     working on a HIIT circuit generator and specified rep ranges for your goals.
                 </p>
                 <hr></hr>
-                <h2>Disclaimer:</h2>
-                <h3>We're Not Doctors.</h3>
+                <h3>Disclaimer: We're Not Doctors.</h3>
                 <p>
                     Please consult a physician before attempting any of these workouts. If they give you the good to go but tell you to limit 
                     certain exercises, hit the "New Exercise" button to swap it out. Exercise at your own risk. We're not responsible for any

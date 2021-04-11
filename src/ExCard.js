@@ -19,6 +19,7 @@ import Store from './store.js'
 import { Button } from "rsuite";
 import 'rsuite/dist/styles/rsuite-default.css';
 import { Card } from 'grommet';
+import { Loader } from 'rsuite';
 
 class ExCard extends Component {
     constructor(props) {
@@ -28,8 +29,21 @@ class ExCard extends Component {
 
     state = {
         hidden: true,
-        number: this.props.number
+        number: this.props.number,
+        loading: true
     }
+
+    async loadData(){
+        const data = //asynchronous call to the API ;
+        this.setState({
+          loading:false,
+        })
+    }
+
+    componentDidMount(){
+        this.loadData();
+      }
+    
 
     showInstructions = () => {
         this.setState({hidden: false})
@@ -56,6 +70,9 @@ class ExCard extends Component {
 
   render() {  
 
+    if(this.state.loading){
+          return ( <Loader /> );
+        }
     
     return (
         
